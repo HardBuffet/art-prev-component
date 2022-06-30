@@ -1,0 +1,11 @@
+include ../functions.js.pug
+
+-
+  const articleCard = {
+    getComponent: () => {
+      return createComponentClasses(
+        'article-card',
+        ['text', 'title', 'desc']
+      );
+    }
+  };

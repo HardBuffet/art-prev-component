@@ -1,0 +1,17 @@
+@use "../../scss/abstracts/_mixins" as *;
+
+.article-card {
+  @include grid($gap: true, $gapVal: 0.75em);
+
+  padding: {
+    block: 1em;
+  }
+
+  @include respond-to('huge') {
+    gap: 1em;
+    padding: {
+      block: 2.1em;
+      inline: 3em;
+    }
+  }
+}

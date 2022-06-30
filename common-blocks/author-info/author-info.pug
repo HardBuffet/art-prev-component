@@ -1,0 +1,9 @@
+include ../../pug/abstracts/variables/authorInfo.js.pug
+
+div(class=authorInfo.getComponent().name)
+  div(class=authorInfo.getComponent().el.imgBox)
+    img(class=authorInfo.getComponent().el.img src="images/avatar-michelle.jpg" alt="" width="175" height="175")
+  div(class=authorInfo.getComponent().el.text)
+    h3 Michelle Appleton
+    p(class=authorInfo.getComponent().el.date) 28 Jun 2020
+  include ../socials/socials.pug

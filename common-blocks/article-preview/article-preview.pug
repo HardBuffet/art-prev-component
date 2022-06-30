@@ -1,0 +1,6 @@
+include ../../pug/abstracts/variables/articlePreview.js.pug
+
+article(class=articlePreview.getComponent().name)
+  div(class=articlePreview.getComponent().el.imgBox)
+    img(class=articlePreview.getComponent().el.img src="images/drawers.jpg" alt="" width="660" height="528")
+  include ../article-card/article-card.pug

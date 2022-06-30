@@ -1,0 +1,20 @@
+@use "../../scss/abstracts/_mixins" as *;
+@use "../../scss/themes/_theme" as t;
+
+.article-preview {
+  width: 25.3em;
+  overflow: hidden;
+  background: {
+    color: t.$art-prev_bg-clr;
+  }
+  border: {
+    radius: 0.65em;
+  }
+
+  @include respond-to('huge') {
+    @include flex;
+
+    width: 56.3em;
+    overflow: initial;
+  }
+}

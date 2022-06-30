@@ -1,0 +1,11 @@
+include ../functions.js.pug
+
+-
+  const articlePreview = {
+    getComponent: () => {
+      return createComponentClasses(
+        'article-preview',
+        ['img-box', 'img']
+      );
+    }
+  };

@@ -1,0 +1,11 @@
+@use "../../../../scss/themes/_theme" as t;
+
+.attribution {
+  &__link {
+    &_hover {
+      &:hover {
+        color: t.$attr__link_hov-clr;
+      }
+    }
+  }
+}

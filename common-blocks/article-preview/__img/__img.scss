@@ -1,0 +1,32 @@
+@use "../../../scss/abstracts/_mixins" as *;
+
+.article-preview {
+  &__img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object: {
+      fit: cover;
+      position: 0px -1.2em;
+    }
+
+    @include respond-to('huge') {
+      height: 280px;
+      border: {
+        top: {
+          left: {
+            radius: 0.65em;
+          }
+        }
+        bottom: {
+          left: {
+            radius: 0.65em;
+          }
+        }
+      }
+      object: {
+        position: left;
+      }
+    }
+  }
+}

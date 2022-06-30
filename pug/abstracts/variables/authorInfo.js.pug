@@ -1,0 +1,11 @@
+include ../functions.js.pug
+
+-
+  const authorInfo = {
+    getComponent: () => {
+      return createComponentClasses(
+        'author-info',
+        ['img-box', 'img', 'text', 'date']
+      );
+    }
+  };

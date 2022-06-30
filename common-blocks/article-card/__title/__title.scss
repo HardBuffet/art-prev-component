@@ -1,0 +1,26 @@
+@use "../../../scss/abstracts/_mixins" as *;
+
+.article-card {
+  &__title {
+    padding: {
+      block: 0.25em;
+    }
+
+    line: {
+      height: 1.5rem;
+    }
+
+    @include respond-to('huge') {
+      padding: {
+        block: 0;
+      }
+      line: {
+        height: 1.7rem;
+      }
+
+      font: {
+        size: 1.275rem;
+      }
+    }
+  }
+}

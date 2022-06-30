@@ -1,0 +1,24 @@
+@use "../../scss/abstracts/_mixins" as *;
+
+.author-info {
+  @include grid(
+    $gap: true,
+    $aI: true,
+    $gTC: true,
+    $gapVal: 1.2em,
+    $gTCVal: auto 1fr auto
+  );
+
+  position: relative;
+  padding: {
+    inline: 2.5em;
+    block: 1em;
+  }
+
+  @include respond-to('huge') {
+    padding: {
+      inline: initial;
+      block: initial;
+    }
+  }
+}

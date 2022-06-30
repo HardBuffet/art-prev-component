@@ -1,0 +1,22 @@
+@use '../../scss/themes/_theme' as t;
+
+.share-btn {
+  &:hover {
+    background: {
+      color: t.$share-btn_active-bg-clr;
+    }
+  }
+
+  &_active {
+    background: {
+      color: t.$share-btn_active-bg-clr;
+    }
+
+
+    &:hover {
+      background: {
+        color: t.$share-btn_active-hover-bg-clr;
+      }
+    }
+  }
+}

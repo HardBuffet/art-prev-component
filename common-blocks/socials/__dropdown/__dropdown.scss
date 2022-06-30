@@ -1,0 +1,56 @@
+@use "../../../scss/abstracts/_mixins" as *;
+@use "../../../scss/themes/_theme" as t;
+
+.socials {
+  &__dropdown {
+    @include grid(
+      $gap: true,
+      $aI: true,
+      $gTC: true,
+      $gapVal: 1.2em,
+      $gTCVal: auto 1fr
+    );
+    display: none;
+    position: absolute;
+    inset: 0;
+    background: {
+      color: t.$soc__dropdown_bg-clr;
+    }
+    padding: {
+      inline: 2.5em;
+    }
+
+    @include respond-to("huge") {
+      position: absolute;
+      left: -110px;
+      top: -85px;
+      height: fit-content;
+      padding: {
+        inline: 2.88em;
+        block: 1.2em;
+      }
+      width: fit-content;
+      box: {
+        shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+      }
+      border: {
+        radius: 10px;
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 20px;
+        aspect: {
+          ratio: 1;
+        }
+        background: {
+          color: t.$soc__dropdown_bg-clr;
+        }
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        bottom: -9px;
+      }
+    }
+  }
+}

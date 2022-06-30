@@ -1,0 +1,10 @@
+@use "../../../scss/themes/_theme" as t;
+
+.author-info {
+  &__date {
+    color: t.$author-info__date_clr;
+    font: {
+      size: 0.83rem;
+    }
+  }
+}

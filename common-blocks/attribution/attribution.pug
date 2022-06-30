@@ -1,0 +1,13 @@
+include ../../pug/abstracts/variables/attribution.js.pug
+
+div(class=attribution.getComponent().name)
+  p(class=attribution.getComponent().el.note) Challenge by
+    |
+    |
+    a(class=`${attribution.getComponent().el.link} ${attribution.modOn("hover", false, "link")}` href="https://www.frontendmentor.io?ref=challenge" target="_blank")
+      | Frontend Mentor
+  p(class=attribution.getComponent().el.note) Coded by
+    |
+    |
+    a(class=`${attribution.getComponent().el.link} ${attribution.modOn("hover", false, "link")}` href="https://www.frontendmentor.io/profile/HardBuffet")
+      | HardBuffet

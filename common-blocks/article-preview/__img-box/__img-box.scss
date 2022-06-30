@@ -1,0 +1,16 @@
+@use "../../../scss/abstracts/_mixins" as *;
+
+.article-preview {
+  &__img-box {
+    width: 100%;
+    height: 200px;
+
+    @include respond-to('huge') {
+      width: initial;
+      height: initial;
+      min: {
+        width: 287px;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@use "../abstracts/_mixins" as *;
+
+.sr {
+  &-only {
+    @include sr-only;
+  }
+}

@@ -1,0 +1,17 @@
+@use '../../scss/themes/_theme' as t;
+
+.share-btn {
+  z-index: 400;
+  position: relative;
+  width: 2.4em;
+  cursor: pointer;
+  aspect: {
+    ratio: 1 / 1;
+  }
+  background: {
+    color: t.$share-btn_bg-clr;
+  }
+  border: none {
+    radius: 50%;
+  }
+}

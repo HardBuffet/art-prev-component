@@ -1,0 +1,19 @@
+@use "../../scss/abstracts/_mixins" as *;
+
+.article-card {
+  &_pad-b-e_zero {
+    padding: {
+      block: {
+        end: 0;
+      }
+    }
+
+    @include respond-to("huge") {
+      padding: {
+        block: {
+          end: 2.1em;
+        }
+      }
+    }
+  }
+}

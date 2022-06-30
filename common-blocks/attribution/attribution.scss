@@ -1,0 +1,20 @@
+@use "../../scss/themes/_theme" as t;
+
+.attribution {
+  padding: 0.25em;
+  color: t.$attr_clr;
+  background: {
+    color: t.$attr_bg-clr;
+  }
+  text: {
+    align: center;
+  }
+}
+
+// only for the challenge
+.attribution {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

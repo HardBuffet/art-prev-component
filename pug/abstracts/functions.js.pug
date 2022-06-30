@@ -1,0 +1,83 @@
+//- ==========================================================================
+//- create component classes
+//- ==========================================================================
+//-
+//- create an object storing classes of the component
+//- --------------------------------------------------------------------------
+-
+  function createComponentClasses(parentClass, elementClasses, modsClasses) {
+    if (typeof parentClass !== "string") {
+      return;
+    }
+
+    const component = {};
+    component.name = parentClass;
+
+    if (elementClasses) {
+      component.el = {};
+      addElOrModValToAnObj(component, elementClasses, true);
+    }
+
+    if (modsClasses) {
+      component.mods = {};
+      addElOrModValToAnObj(component, modsClasses, false);
+    }
+
+    return component;
+  }
+
+//- ==========================================================================
+//- replace a string to a camel case
+//- ==========================================================================
+//- the function below gets one argument
+//- if the argument is not a string then return text info
+//- otherwise check if the string matches to the regex
+//- if false, return not changed string
+//- else find hyphen in the string and make an array from the string
+//- then run loop through all strings in the array
+//- do not change first string,
+//- change first letter of each next string to upper case, then return
+//- --------------------------------------------------------------------------
+-
+  function replaceTextToCamelCase(txt) {
+    if (typeof txt !== "string") {
+      return "Array elements have to be a strings.";
+    };
+
+    const regex = /[-*]/g;
+    let newText = '';
+
+    if (!txt.match(regex)) { return txt };
+    if (txt.match(regex)) {
+      const arr = txt.split('-');
+
+      for (let i = 0; i < arr.length; i++) {
+        if (i < 1) { newText = arr[i] }
+        if (i >= 1) {
+          const firstLetter = arr[i][0];
+          newText += arr[i].replace(arr[i][0], arr[i][0].toUpperCase());
+        }
+      }
+    }
+
+    return newText;
+  }
+
+//- ==========================================================================
+//- add elements or modifiers to an object
+//- ==========================================================================
+//-
+//- if 'el' is true then put an element to the obj
+//- otherwise put a modifier to the obj
+//- --------------------------------------------------------------------------
+-
+  function addElOrModValToAnObj(obj, arr, el) {
+    for (let i = 0; i < arr.length; i++) {
+      const newCamelText = replaceTextToCamelCase(arr[i]);
+
+      el
+        ? (obj.el[newCamelText] = `${obj.name}__${arr[i]}`)
+        : (obj.mods[newCamelText] = `_${arr[i]}`);
+    }
+    return obj;
+  }

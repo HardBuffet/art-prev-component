@@ -1,0 +1,13 @@
+include ../../pug/abstracts/variables/socials.js.pug
+
+div(class=socials.getComponent().name)
+  include ../share-btn/share-btn.pug
+  div(class=socials.getComponent().el.dropdown)
+    p(class=socials.getComponent().el.title) Share
+    div(class=socials.getComponent().el.links)
+      a(href="https://facebook.com")
+        img(src="images/icon-facebook.svg" alt="" width="20" height="20")
+      a(href="https://twitter.com")
+        img(src="images/icon-twitter.svg" alt="" width="20" height="17")
+      a(href="https://pinterest.com")
+        img(src="images/icon-pinterest.svg" alt="" width="20" height="20")

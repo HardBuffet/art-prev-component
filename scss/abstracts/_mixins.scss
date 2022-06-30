@@ -1,0 +1,111 @@
+@use "variables" as v;
+
+// ==========================================================================
+// sr-only
+// ==========================================================================
+@mixin sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+// ==========================================================================
+// reset
+// ==========================================================================
+@mixin reset {
+  padding: 0;
+  margin: 0;
+  box: {
+    sizing: border-box;
+  }
+}
+
+// ==========================================================================
+// breakpoints
+// ==========================================================================
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get(v.$breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == "string",
+      unquote($raq-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{v.$breakpoints}`. ' +
+        'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+// ==========================================================================
+// grid
+// ==========================================================================
+@mixin grid(
+  $pI: false,
+  $gTC: false,
+  $gTR: false,
+  $aI: false,
+  $jC: false,
+  $gap: false,
+  $gTCVal: auto,
+  $gTRVal: auto,
+  $pIVal: center,
+  $aIVal: center,
+  $jCVal: center,
+  $gapVal: 1em
+) {
+  display: grid;
+
+  @if $pI {
+    place: {
+      items: $pIVal;
+    }
+  }
+
+  @if $gTC {
+    grid: {
+      template: {
+        columns: $gTCVal;
+      }
+    }
+  }
+
+  @if $gTR {
+    grid: {
+      template: {
+        rows: $gTRVal;
+      }
+    }
+  }
+
+  @if $gap {
+    gap: $gapVal;
+  }
+
+  @if $aI {
+    align: {
+      items: $aIVal;
+    }
+  }
+
+  @if $jC {
+    justify: {
+      content: $jCVal;
+    }
+  }
+}
+
+// ==========================================================================
+// flex
+// ==========================================================================
+@mixin flex {
+  display: flex;
+}

@@ -1,0 +1,7 @@
+@use "../../scss/abstracts/_mixins" as *;
+
+.socials {
+  @include respond-to('huge') {
+    position: relative;
+  }
+}

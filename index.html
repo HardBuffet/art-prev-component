@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Article preview component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script type="module" src="js/script.js"></script>
+  </head>
+  <body>
+    <header class="sr-only">
+      <h1>Article Preview Component</h1>
+    </header>
+    <main>
+      <article class="article-preview">
+        <div class="article-preview__img-box">
+          <img
+            class="article-preview__img"
+            src="images/drawers.jpg"
+            alt=""
+            width="660"
+            height="528"
+          />
+        </div>
+        <div class="article-card">
+          <div class="article-card__text">
+            <h2 class="article-card__title">
+              Shift the overall look and feel by adding these wonderful touches
+              to furniture in your home
+            </h2>
+            <p class="article-card__desc">
+              Ever been in a room and felt like something was missing? Perhaps
+              it felt slightly bare and uninviting. I’ve got some simple tips to
+              help you make any room feel complete.
+            </p>
+          </div>
+          <div class="author-info">
+            <div class="author-info__img-box">
+              <img
+                class="author-info__img"
+                src="images/avatar-michelle.jpg"
+                alt=""
+                width="175"
+                height="175"
+              />
+            </div>
+            <div class="author-info__text">
+              <h3>Michelle Appleton</h3>
+              <p class="author-info__date">28 Jun 2020</p>
+            </div>
+            <div class="socials">
+              <button class="share-btn" data-share-btn>
+                <img
+                  src="images/icon-share.svg"
+                  alt=""
+                  width="15"
+                  height="13"
+                />
+              </button>
+              <div class="socials__dropdown">
+                <p class="socials__title">Share</p>
+                <div class="socials__links">
+                  <a href="https://facebook.com"
+                    ><img
+                      src="images/icon-facebook.svg"
+                      alt=""
+                      width="20"
+                      height="20" /></a
+                  ><a href="https://twitter.com"
+                    ><img
+                      src="images/icon-twitter.svg"
+                      alt=""
+                      width="20"
+                      height="17" /></a
+                  ><a href="https://pinterest.com"
+                    ><img
+                      src="images/icon-pinterest.svg"
+                      alt=""
+                      width="20"
+                      height="20"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    <footer>
+      <div class="attribution">
+        <p class="attribution__note">
+          Challenge by
+          <a
+            class="attribution__link attribution__link_hover"
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+            >Frontend Mentor</a
+          >
+        </p>
+        <p class="attribution__note">
+          Coded by
+          <a
+            class="attribution__link attribution__link_hover"
+            href="https://www.frontendmentor.io/profile/HardBuffet"
+            >HardBuffet</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

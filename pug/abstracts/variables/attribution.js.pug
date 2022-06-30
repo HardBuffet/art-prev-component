@@ -1,0 +1,23 @@
+include ../functions.js.pug
+
+-
+  const attribution = {
+    getComponent: () => {
+      return createComponentClasses(
+        'attribution',
+        ['note', 'link'],
+        ['hover']
+      );
+    },
+    modOn: function(modName, block, elName) {
+      if (!modName) { return };
+
+      if (block) {
+        return this.getComponent().name + this.getComponent().mods[modName];
+      } else {
+        return this.getComponent().el[elName] + this.getComponent().mods[modName];
+      }
+
+      return console.log(this.getComponent().mods[modName]);
+    }
+  };

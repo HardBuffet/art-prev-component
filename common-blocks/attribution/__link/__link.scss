@@ -1,0 +1,7 @@
+@use "../../../scss/themes/_theme" as t;
+
+.attribution {
+  &__link {
+    color: t.$attr__link_clr;
+  }
+}

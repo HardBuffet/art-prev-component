@@ -1,0 +1,23 @@
+@use "../../../scss/abstracts/_mixins" as *;
+
+.article-card {
+  &__desc {
+    font: {
+      size: 0.815rem;
+    }
+    line: {
+      height: 1.2rem;
+    }
+    max: {
+      inline: {
+        size: 97%;
+      }
+    }
+
+    @include respond-to('huge') {
+      font: {
+        size: 0.825rem;
+      }
+    }
+  }
+}

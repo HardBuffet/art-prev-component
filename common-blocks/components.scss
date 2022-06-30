@@ -1,0 +1,71 @@
+// ==========================================================================
+// article-preview
+// ==========================================================================
+@use "article-preview/article-preview" as artPrev;
+//
+// elements
+// --------------------------------------------------------------------------
+@use "article-preview/__img-box/__img-box" as artPrevImgBox;
+@use "article-preview/__img/__img" as artPrevImg;
+
+// ==========================================================================
+// article-card
+// ==========================================================================
+@use "article-card/article-card" as artCard;
+//
+// elements
+// --------------------------------------------------------------------------
+@use "article-card/__title/__title" as artCardTitle;
+@use "article-card/__text/__text" as artCardText;
+@use "article-card/__desc/__desc" as artCardDesc;
+//
+// modifiers
+// --------------------------------------------------------------------------
+@use "article-card/_pad-b-e_zero" as artCardMod;
+
+// ==========================================================================
+// author-info
+// ==========================================================================
+@use "author-info/author-info" as autInfo;
+//
+// elements
+// --------------------------------------------------------------------------
+@use "author-info/__img-box/__img-box" as autInfoImgBox;
+@use "author-info/__img/__img" as autInfoImg;
+@use "author-info/__text/__text" as autInfoText;
+@use "author-info/__date/__date" as autInfoDate;
+
+// ==========================================================================
+// share-btn
+// ==========================================================================
+@use "share-btn/share-btn" as shareBtn;
+//
+// modifiers
+// --------------------------------------------------------------------------
+@use "share-btn/share-btn_active.scss" as shareBtnActive;
+
+// ==========================================================================
+// socials
+// ==========================================================================
+@use "socials/socials" as socials;
+//
+// elements
+// --------------------------------------------------------------------------
+@use "socials/__dropdown/__dropdown" as socialsDropdown;
+@use "socials/__dropdown/_active/_active" as socialsDropdownActive;
+@use "socials/__title/__title" as socialsTitle;
+@use "socials/__links/__links" as socialsLinks;
+
+// ==========================================================================
+// attribution
+// ==========================================================================
+@use "attribution/attribution" as attr;
+//
+// elements
+// --------------------------------------------------------------------------
+@use "attribution/__note/__note" as attrNote;
+@use "attribution/__link/__link" as attrLink;
+//
+// modifiers
+// --------------------------------------------------------------------------
+@use "attribution/__link/_hover/_hover" as attrLinkHover;
