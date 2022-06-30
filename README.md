@@ -42,7 +42,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 ### Links
 
 - Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/type-name-here)
-- Live Site URL: [GitHub Pages](https://hardbuffet.github.io/Article-Preview-Component/)
+- Live Site URL: [GitHub Pages](https://hardbuffet.github.io/art-prev-component/)
 
 ## My process
 
